@@ -17,11 +17,12 @@
    - Tyranny
    - Xcom
    - Shadow tactics
+   - Fallout tactics
 
 ## RTS
 
+   -  
    - 
-   -
 
 ## 4x et grand-strategy
 
@@ -30,3 +31,6 @@
 
 
 ## Autres
+
+   - 
+   - 
