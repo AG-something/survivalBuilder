@@ -1,0 +1,6 @@
+mod tile{
+    enum owner{
+	Player(n : i64),
+	Company,
+    }
+}

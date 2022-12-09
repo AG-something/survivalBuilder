@@ -1,3 +1,5 @@
+pub mod grid;
+
 fn main() {
-    println!("Hello, world!");
+    let t = grid::resource::resource::Resource::new(5, grid::resource::resource::ResourceKind::Water);
 }
