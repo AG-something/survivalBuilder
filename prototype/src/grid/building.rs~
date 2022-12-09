@@ -1,0 +1,10 @@
+pub mod building{
+    #[derive(Debug, Clone, Copy)]
+    pub enum BuildingKind{
+	WaterExtractor(u64),
+	
+    }
+
+
+
+}
