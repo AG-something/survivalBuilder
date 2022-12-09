@@ -8,4 +8,4 @@
 - Type (Enum)
 
 ## Grid (struct)
-- 
+  
