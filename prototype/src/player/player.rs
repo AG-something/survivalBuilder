@@ -10,7 +10,7 @@ pub mod player{
         civ : str,
         totalpoint : u64,
         workers : Vec<WorkerGroup>,
-        Possible_actions : Vec<Action>,
+        possible_actions : Vec<Action>,
     }
 
 
