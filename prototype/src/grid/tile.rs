@@ -1,13 +1,15 @@
 pub mod tile{
     use crate::grid::resource::resource::Resource;
     use crate::grid::building::building::BuildingSlot;
-    
+
+    #[derive(Debug)]
     enum Owner{
 	Player(i64),
 	Company(i64),
 	None,
     }
 
+    #[derive(Debug)]
     pub enum Terrain{
 	Mountains,
 	Rivers,
@@ -15,6 +17,7 @@ pub mod tile{
 	Meadows,   // Default, no buff no debuff
     }
 
+    #[derive(Debug)]
     pub struct Tile{
 	position : (u64, u64),
 	owner : Owner,

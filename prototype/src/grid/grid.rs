@@ -1,25 +1,24 @@
-mod grid{
+pub mod grid{
     use crate::grid::tile::tile;
     use crate::grid::resource::resource;
     use rand::Rng;
-    
-    struct Grid {
+
+    #[derive(Debug)]
+    pub struct Grid {
 	tiles : Vec<Vec<tile::Tile>>,
     }
 
     impl Grid {
-	fn new(dim : u64) -> Grid{
+	pub fn new(dim1 : u64, dim2 : u64) -> Grid{
 	    Grid{
 		tiles : {
-		    //		    let ts = Vec<Vec<tile::Tile>>.new();
 		    let mut ts = Vec::new();
 		    let mut rng = rand::thread_rng();
 		    let mut i : u64 = 0;
-		    while i < dim {
-			//			let ts_i = Vec<tile::Tile>>.new();
+		    while i < dim1 {
 			let mut ts_i = Vec::new();
 			let mut j : u64 = 0;
-			while j < dim {
+			while j < dim2 {
 			    let resource_dice : u64 = rng.gen_range(0..6);
 			    let res : resource::Resource = {
 				let quantity : u64 = rng.gen_range(10..100);
@@ -50,6 +49,50 @@ mod grid{
 		    ts
 		}
 	    }
+	}
+
+	pub fn print_grid(&self){
+	    let mut i : usize = 0;
+	    let dim1 = self.tiles.len();
+	    let dim2 = self.tiles[0].len();
+
+	    // Print the first line with numbers indexing columns
+	    print!("   ");
+	    while i < dim2 {
+		print!("| {:?} ", i);
+		i = i + 1;
+	    }
+	    println!("|");
+
+	    i = 0;
+	    let mut c : u8 = 65;
+	    while i < dim1 {
+		let mut j : usize = 0;
+		print!("---");
+		while j < dim2 {
+		    print!("|---");
+		    j = j + 1;
+		}
+		println!("|");
+		
+		print!("{:?}", c as char);
+		c = c + 1;
+		j = 0;
+		while j < dim2 {
+		    print!("|   ");
+		    j = j + 1;
+		}
+		println!("|");
+		i = i + 1;
+	    }
+
+	    print!("---");
+	    i = 0;
+	    while i < dim2 {
+		print!("|---");
+		i = i + 1;
+	    }
+	    println!("|");
 	}
     }
 }
