@@ -1,11 +1,27 @@
 (Le read me du repo : prototype)
 
-# Grid Architecture 
-## Tile  (Struct)
-- Owner (Enum)
-- Resources (list enum)
-- Building slots (Array Enum)
-- Type (Enum)
+# Grid Architecture  
 
-## Grid (struct)
-  
+## Res
+
+## Buildslot
+
+## Tile
+
+
+# Player Architecture
+## Units Architecture 
+
+### Classes
+ 
+#### Farmer
+#### Constructor
+
+#### Heal
+
+### Map 
+La représentation de la grid et des possibilités d'actions.
+
+
+
+#### Building 
