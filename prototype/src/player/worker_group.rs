@@ -1,5 +1,5 @@
 pub mod worker_group{
-    use crate::grid::resource::resouce::Resource;
+    use crate::grid::resource::resource::Resource;
     use crate::grid::building::building::BuildingSlot;
 
     #[derive(Debug, Clone, Copy)]
