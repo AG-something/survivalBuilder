@@ -16,7 +16,7 @@ pub mod building{
     }
 
     impl BuildingSlot{
-	fn new(number_of_slots : u64) -> BuildingSlot{
+	pub fn new() -> BuildingSlot{
 	    BuildingSlot{
 		building : BuildingKind::None,
 		status : 0,		
