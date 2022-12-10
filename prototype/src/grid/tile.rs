@@ -27,6 +27,7 @@ pub mod tile{
     }
 
     impl Tile{
+	// Constructor for Tile
 	pub fn new(pos : (u64, u64), ter : Terrain, res : Resource, size : u64) -> Tile{
 	    Tile{
 		position : pos,
@@ -43,6 +44,11 @@ pub mod tile{
 		    b
 		}
 	    }
+	}
+
+	// Pretty printing a tile
+	pub fn print_tile(&self) {
+	    println!("{:?}", self);
 	}
     }
 }

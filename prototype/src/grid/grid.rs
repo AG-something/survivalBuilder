@@ -51,6 +51,7 @@ pub mod grid{
 	    }
 	}
 
+	// Method that pretty prints the grid
 	pub fn print_grid(&self){
 	    let mut i : usize = 0;
 	    let dim1 = self.tiles.len();
@@ -94,5 +95,11 @@ pub mod grid{
 	    }
 	    println!("|");
 	}
+
+	// A method that targets a grid location and prints the content of the tile at that location
+	pub fn inspect_tile(&self, x : usize, y : usize){
+	    let _ = &self.tiles[x][y].print_tile();
+	}
     }
+
 }
