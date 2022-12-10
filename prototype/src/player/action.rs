@@ -6,7 +6,7 @@ pub mod actions{
     pub struct Action{
         conditions : Vec<enum>,
         output : fn, 
-        choices : Vec<str>  // All the possible choices of a specific actions
+        choices : Vec<str>  // All the possible choices of a specific action
     }
     
     impl Action{
